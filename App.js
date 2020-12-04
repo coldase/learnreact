@@ -1,34 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import SongBtn from "./components/SongBtn.js";
+import SongBtn from "./components/SongBtn";
 
+export default function App(props) {
+    const button_list = [];
+    const music_list = [];  
 
-export default function App() {
-
-  const button_list = [];
-  const music_list = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15"
-  ];
-
-    for(let i=0; i < music_list.length; i++){
-      button_list.push(<SongBtn song_id={i} key={i} song_name={`${music_list[i]}`}></SongBtn>);
+    for(let i=1; i<16;i++){
+      button_list.push(<SongBtn key={i} song_id={i} onPress={() => PlaySong()}/>)
     };
-
+    
     return (
     
     <View style={styles.container}>
@@ -40,7 +22,6 @@ export default function App() {
         
         <View style={styles.bottom}>
           {button_list}
-          
         </View>
         
       </View>
