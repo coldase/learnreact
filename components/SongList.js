@@ -8,7 +8,6 @@ const SongList = [
     require("../assets/sounds/7.mp3"),
     require("../assets/sounds/8.mp3"),
     require("../assets/sounds/9.mp3"),
-    require("../assets/sounds/9.mp3"),
     require("../assets/sounds/10.mp3"),
     require("../assets/sounds/11.mp3"),
     require("../assets/sounds/12.mp3"),

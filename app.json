@@ -1,15 +1,15 @@
 {
-  "name": "savelnappi_2",
-  "displayName": "savelnappi_2",
+  "name": "savelnappi_3",
+  "displayName": "savelnappi_3",
   "expo": {
-    "name": "savelnappi_2",
-    "slug": "savelnappi_2",
+    "name": "savelnappi_3",
+    "slug": "savelnappi_3",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.coldase.savelnappi_2"
+      "package": "com.coldase.savelnappi_3"
     }
   }
 }

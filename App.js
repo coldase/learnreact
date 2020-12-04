@@ -7,7 +7,7 @@ import SongList from './components/SongList';
 export default function App(props) {
     const button_list = [];
     
-    for(let i=1; i<SongList.length;i++){
+    for(let i=0; i<SongList.length;i++){
       button_list.push(<SongBtn key={i} song_id={i} onPress={() => PlaySong()}/>)
     };
     
@@ -30,7 +30,7 @@ export default function App(props) {
 
   const styles = StyleSheet.create({
     container: {
-      backgroundColor: "deepskyblue",
+      backgroundColor: "#bae1ff",
       flex: 1,
     },
     bottom: {

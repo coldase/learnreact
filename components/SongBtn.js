@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { ImageBackground, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Audio } from 'expo-av';
 import SongList from './SongList';
+import ImageList from './ImageList';
 
 let playing = false;
 
@@ -11,42 +12,32 @@ const SongBtn = (props) => {
   const [current_song, setSong] = useState(SongList[props.song_id]);
   
   const PlaySong = async () =>{
+    setColor(styles.bottomInnerNo);
     if (!playing){
         const soundObject = new Audio.Sound();
         try {
             Audio.setIsEnabledAsync(true);
             await soundObject.loadAsync(current_song);
             await soundObject.playAsync();
-        }
+          }
         catch (error){
             console.log(error);
         }
         playing = true;
+        setColor(styles.bottomInnerYes)
     }else{
             Audio.setIsEnabledAsync(false);
             playing = false;
         }
-};
-
-    const change_color = () => {
-      if (current_color === styles.bottomInnerYes){
-        setColor(styles.bottomInnerNo);
-      }else{
-        setColor(styles.bottomInnerYes)
-      }
-    };
-
-    const onButtonClick = () => {
-      change_color();
-      PlaySong();
-      console.log(props);
-    };
+  };
 
     return (
         
         <View style={styles.bottomItem}>
-          <TouchableOpacity style={current_color} onPress={onButtonClick}>
-            <Text style={styles.buttontext}>{props.song_id}</Text>
+          <TouchableOpacity style={current_color} onPress={PlaySong}>
+            <ImageBackground style={styles.image} source={ImageList[props.song_id]}>
+              <Text style={styles.buttontext}>{props.song_id+1}</Text>
+            </ImageBackground>
           </TouchableOpacity>
         </View>
     );
@@ -62,18 +53,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flex:1,
         backgroundColor: "#fff",
-        borderRadius: 10,
+        borderRadius: 2,
         shadowColor: "#000",
         shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5
       },
+      image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
+      },
       bottomInnerYes:{
         justifyContent: 'center',
         flex:1,
         backgroundColor: "#34e62f",
-        borderRadius: 10,
+        borderRadius: 2,
+        borderColor: "red",
+        borderWidth: 3,
         shadowColor: "#000",
         shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.25,
@@ -81,8 +79,13 @@ const styles = StyleSheet.create({
         elevation: 5
       },
       buttontext: {
-        fontSize: 20,
-        textAlign: 'center'
+        fontSize: 50,
+        textAlign: 'center',
+        shadowColor: "#000",
+        color: "#fff",
+        textShadowOffset: {width: 2, height: 2},
+        textShadowRadius: 10,
+        textShadowColor: "#000"
       }
 
 });

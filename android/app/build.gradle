@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.savelnappi2"
+        applicationId "com.savelnappi3"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
