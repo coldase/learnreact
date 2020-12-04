@@ -11,7 +11,6 @@ const SongBtn = (props) => {
   const [current_song, setSong] = useState(SongList[props.song_id]);
   
   const PlaySong = async () =>{
-    
     if (!playing){
         const soundObject = new Audio.Sound();
         try {
@@ -28,7 +27,6 @@ const SongBtn = (props) => {
             playing = false;
         }
 };
-    
 
     const change_color = () => {
       if (current_color === styles.bottomInnerYes){

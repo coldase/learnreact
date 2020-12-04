@@ -1,4 +1,4 @@
-package com.lollero.generated;
+package com.savelnappi2.generated;
 
 import java.util.Arrays;
 import java.util.List;

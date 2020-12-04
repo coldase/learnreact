@@ -17,4 +17,4 @@ const SongList = [
     require("../assets/sounds/15.mp3")
   ];
 
-  export default SongList;
+export default SongList;

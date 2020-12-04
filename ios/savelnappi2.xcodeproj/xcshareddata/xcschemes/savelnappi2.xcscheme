@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "lollero.app"
-               BlueprintName = "lollero"
-               ReferencedContainer = "container:lollero.xcodeproj">
+               BuildableName = "savelnappi2.app"
+               BlueprintName = "savelnappi2"
+               ReferencedContainer = "container:savelnappi2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "lolleroTests.xctest"
-               BlueprintName = "lolleroTests"
-               ReferencedContainer = "container:lollero.xcodeproj">
+               BuildableName = "savelnappi2Tests.xctest"
+               BlueprintName = "savelnappi2Tests"
+               ReferencedContainer = "container:savelnappi2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lollero.app"
-            BlueprintName = "lollero"
-            ReferencedContainer = "container:lollero.xcodeproj">
+            BuildableName = "savelnappi2.app"
+            BlueprintName = "savelnappi2"
+            ReferencedContainer = "container:savelnappi2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "lollero.app"
-            BlueprintName = "lollero"
-            ReferencedContainer = "container:lollero.xcodeproj">
+            BuildableName = "savelnappi2.app"
+            BlueprintName = "savelnappi2"
+            ReferencedContainer = "container:savelnappi2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

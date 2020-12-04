@@ -2,12 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SongBtn from "./components/SongBtn";
+import SongList from './components/SongList';
 
 export default function App(props) {
     const button_list = [];
-    const music_list = [];  
-
-    for(let i=1; i<16;i++){
+    
+    for(let i=1; i<SongList.length;i++){
       button_list.push(<SongBtn key={i} song_id={i} onPress={() => PlaySong()}/>)
     };
     
